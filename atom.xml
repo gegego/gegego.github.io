@@ -4,7 +4,7 @@
   <title><![CDATA[Lost Now]]></title>
   <link href="http://gegego.github.io/atom.xml" rel="self"/>
   <link href="http://gegego.github.io/"/>
-  <updated>2016-10-19T12:29:59+02:00</updated>
+  <updated>2016-10-19T12:47:37+02:00</updated>
   <id>http://gegego.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -18,7 +18,7 @@
     <link href="http://gegego.github.io/blog/2016/10/19/ni-hao/"/>
     <updated>2016-10-19T12:29:53+02:00</updated>
     <id>http://gegego.github.io/blog/2016/10/19/ni-hao</id>
-    <content type="html"><![CDATA[
+    <content type="html"><![CDATA[<p>try the content</p>
 ]]></content>
   </entry>
   
