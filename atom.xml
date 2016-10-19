@@ -4,7 +4,7 @@
   <title><![CDATA[Lost Now]]></title>
   <link href="http://gegego.github.io/atom.xml" rel="self"/>
   <link href="http://gegego.github.io/"/>
-  <updated>2016-10-19T12:22:53+02:00</updated>
+  <updated>2016-10-19T12:25:17+02:00</updated>
   <id>http://gegego.github.io/</id>
   <author>
     <name><![CDATA[]]></name>
@@ -12,5 +12,14 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World]]></title>
+    <link href="http://gegego.github.io/blog/2016/10/19/hello-world/"/>
+    <updated>2016-10-19T12:25:07+02:00</updated>
+    <id>http://gegego.github.io/blog/2016/10/19/hello-world</id>
+    <content type="html"><![CDATA[
+]]></content>
+  </entry>
   
 </feed>
