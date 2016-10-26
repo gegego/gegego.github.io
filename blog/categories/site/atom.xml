@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Noarchive | Lost Now]]></title>
-  <link href="http://gegego.github.io/blog/categories/noarchive/atom.xml" rel="self"/>
+  <title><![CDATA[Category: Site | Lost Now]]></title>
+  <link href="http://gegego.github.io/blog/categories/site/atom.xml" rel="self"/>
   <link href="http://gegego.github.io/"/>
   <updated>2016-10-26T16:37:33+02:00</updated>
   <id>http://gegego.github.io/</id>
