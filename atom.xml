@@ -4,7 +4,7 @@
   <title><![CDATA[Lost Now]]></title>
   <link href="http://gegego.github.io/atom.xml" rel="self"/>
   <link href="http://gegego.github.io/"/>
-  <updated>2016-10-19T23:39:27+02:00</updated>
+  <updated>2016-10-26T16:32:39+02:00</updated>
   <id>http://gegego.github.io/</id>
   <author>
     <name><![CDATA[Jack]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Birthday Gif]]></title>
+    <link href="http://gegego.github.io/blog/2016/10/26/birthday-gif/"/>
+    <updated>2016-10-26T16:19:29+02:00</updated>
+    <id>http://gegego.github.io/blog/2016/10/26/birthday-gif</id>
+    <content type="html"><![CDATA[<p><img class="left" src="http://gegego.github.io/images/gif/1.gif" width="200" height="200"></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Sunset]]></title>
