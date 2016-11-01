@@ -4,7 +4,7 @@
   <title><![CDATA[Lost Now]]></title>
   <link href="http://gegego.github.io/atom.xml" rel="self"/>
   <link href="http://gegego.github.io/"/>
-  <updated>2016-11-01T14:58:53+01:00</updated>
+  <updated>2016-11-01T16:03:04+01:00</updated>
   <id>http://gegego.github.io/</id>
   <author>
     <name><![CDATA[Jack]]></name>
@@ -18,7 +18,9 @@
     <link href="http://gegego.github.io/blog/2016/10/19/sunset/"/>
     <updated>2016-10-19T13:32:18+02:00</updated>
     <id>http://gegego.github.io/blog/2016/10/19/sunset</id>
-    <content type="html"><![CDATA[<p><embed src='http://player.youku.com/player.php/sid/XMTY5NDM5MDY0NA==/v.swf' allowFullScreen='true' quality='high' width='480' height='400' align='middle' allowScriptAccess='always' type='application/x-shockwave-flash'></embed></p>
+    <content type="html"><![CDATA[<p><video src="http://gegego.github.io/videos/sunset.mp4"   controls="controls">
+Your browser does not support the video tag.
+</video></p>
 
 <p>
 买了延时线，试了下拍了段窗外的日落，中间断了几帧，不过效果真的是不错。在德国生活确实挺无聊的，无聊到每天都要找点事做做，为此也不得不说老外的动手能力强应该也是无聊的生活逼出来的吧。
