@@ -7,7 +7,11 @@ sharing: false
 footer: true
 ---
 ##<span style="color:red"> 祝你生日快乐，每天都能这么开心快乐。</span><br />
-### 放心，这是个隐藏页面，而且谁也不知道这个地方。<br />
+
+<video src="/videos/birthday.mp4"   controls="controls">
+Your browser does not support the video tag.
+</video>
+### <span style="color:red">放心，这是个隐藏页面，而且谁也不知道这个地方。</span><br />
 - - -
 2016年11月4日，转眼间这已经是遇见你后的第三个生日了，2014年10月2日第一次遇见你的画面至今历历在目，时间，地点，人物都那么清晰，这说明我还不那么老。一直在想今年送什么生日礼物给你，似乎你什么也不缺，什么也不少，一直为难着，前两次给你拍照的时候做了两个gif表情，发现你挺喜欢的，我在想要不给你做一套表情吧。
 - - -
