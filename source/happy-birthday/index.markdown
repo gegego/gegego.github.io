@@ -81,3 +81,6 @@ Your browser does not support the video tag.
 {% img /images/gif/11.gif 280 280 %}
 {% img /images/gif/12.gif 280 280 %}
 {% img /images/gif/1.gif 280 280 %}
+<br /><br />
+**Others**<br /><br />
+{% img /images/gif/qiu.gif 280 280 %}
