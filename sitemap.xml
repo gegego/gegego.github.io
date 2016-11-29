@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>http://gegego.github.io/blog/2016/11/25/tabit/</loc>
+<lastmod>2016-11-25T16:28:22+01:00</lastmod>
+</url>
+<url>
 <loc>http://gegego.github.io/blog/2016/11/23/paint/</loc>
 <lastmod>2016-11-23T21:13:13+01:00</lastmod>
 </url>
@@ -39,5 +43,8 @@
 </url>
 <url>
 <loc>http://gegego.github.io/blog/categories/qiu/</loc>
+</url>
+<url>
+<loc>http://gegego.github.io/posts/2/</loc>
 </url>
 </urlset>
