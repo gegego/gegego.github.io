@@ -4,7 +4,7 @@
   <title><![CDATA[Lost Now]]></title>
   <link href="http://gegego.github.io/atom.xml" rel="self"/>
   <link href="http://gegego.github.io/"/>
-  <updated>2019-11-03T16:13:11+01:00</updated>
+  <updated>2023-05-22T23:42:45+02:00</updated>
   <id>http://gegego.github.io/</id>
   <author>
     <name><![CDATA[Jack]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[疫情之后]]></title>
+    <link href="http://gegego.github.io/blog/2023/05/22/yi-qing-zhi-hou/"/>
+    <updated>2023-05-22T23:39:33+02:00</updated>
+    <id>http://gegego.github.io/blog/2023/05/22/yi-qing-zhi-hou</id>
+    <content type="html"><![CDATA[<p>疫情的两年时间像是停止一般，真的希望所有的一切都没有发生，如果有七龙珠的话，我想集齐龙珠让世界回到2019年的时候，没有疫情也没有战争。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[情人节快乐2019]]></title>
