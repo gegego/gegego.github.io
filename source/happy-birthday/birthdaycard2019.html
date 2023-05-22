@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday</title>
+<style>
+@import url('https://fonts.googleapis.com/css?family=Concert+One|Pacifico');
+
+.mobile {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  top: 50px;
+  font-size: 90px;
+  display: block;
+}
+
+h1, h2, span {
+  display: none;
+}
+
+@media screen and (min-width: 670px) {
+  
+  .mobile {
+    display: none;
+  }
+  
+  h1, h2, span {
+  display: block;
+}
+ $colors: #ef8d22, #feff28, #2bd8ff, #fc85e1;
+$particles: 50;
+$width: 500;
+$height: 500;
+
+// Create the explosion...
+$box-shadow: ();
+$box-shadow2: ();
+@for $i from 0 through $particles {
+  $box-shadow: $box-shadow,
+               random($width)-$width / 2 + px
+               random($height)-$height / 1.2 + px
+               hsl(random(360), 100, 50);
+  $box-shadow2: $box-shadow2, 0 0 #fff
+}
+@mixin keyframes ($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+
+    @-ms-keyframes #{$animationName} {
+        @content;
+    }
+
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin animation-delay ($settings) {
+    -moz-animation-delay: $settings;
+    -webkit-animation-delay: $settings;
+    -o-animation-delay: $settings;
+    -ms-animation-delay: $settings;
+    animation-delay: $settings;
+}
+
+@mixin animation-duration ($settings) {
+    -moz-animation-duration: $settings;
+    -webkit-animation-duration: $settings;
+    -o-animation-duration: $settings;
+    -ms-animation-duration: $settings;
+    animation-duration: $settings;
+}
+
+@mixin animation ($settings) {
+    -moz-animation: $settings;
+    -webkit-animation: $settings;
+    -o-animation: $settings;
+    -ms-animation: $settings;
+    animation: $settings;
+}
+
+@mixin transform ($settings) {
+    transform: $settings;
+    -moz-transform: $settings;
+    -webkit-transform: $settings;
+    -o-transform: $settings;
+    -ms-transform: $settings;
+}
+
+body{
+ background: linear-gradient(to right, #e2b8f7, #d4bafa, #c7bcfb, #b9befb, #acbff9);
+ cursor: crosshair;
+ perspective: 1000px;
+ transform-style: preserve-3d;
+ font-family: "Pacifico",cursive;
+}
+
+span {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  top: 70px;
+  font-size: 70px;
+}
+
+h2 {  
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  top: 50px;
+  font-size: 90px;
+  background: -webkit-linear-gradient(90deg, rgba(233,230,255,1) 0%, rgba(255,255,255,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+bokeh {
+  position: fixed;
+  width: 2vmin;
+  height: 2vmin;
+  border-radius: 50%;
+  animation-name: explosion;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;
+  animation-timing-function: cubic-bezier(0.84, 0.02, 1, 1);
+  @for $i from 1 through 100 {
+    &:nth-child(#{$i}) {
+      $color: ceil(random() * 4);
+      background-color: nth($colors, $color);
+      $x: random() * 100vw;
+      $y: random() * 100vh;
+      transform: translate($x, $y);
+      animation-duration: random() * 3s + 2s;
+      animation-delay: random() * -5s;
+    }
+  }
+}
+@keyframes explosion {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(50vw, 100vh);
+  }
+}
+
+
+
+.cake {
+  position: relative;
+  top: 165px;
+  margin: auto;
+  width: 100px;
+  height: 30px;
+  background: #f9fdff;
+  border-radius: 100%;
+  transform: translateZ(100px);
+  
+  box-shadow: 
+    0px 4px 0px #f4f9fd, 
+    0px 8px 0px #dba9ff, 
+    0px 12px 0px #fec3b3, 
+    
+    0px 16px 0px #f7f6fb, 
+    0px 20px 0px #f7f6fb, 
+    0px 24px 0px #f7f6fb,
+    0px 28px 0px #f7f6fb,
+    0px 32px 0px #fea0bb,
+    0px 36px 0px #fea0bb,
+    0px 40px 0px #9cef9d,
+    0px 44px 0px #9cef9d, 
+    
+    0px 48px 0px #f7f6fb, 
+    0px 52px 0px #f7f6fb, 
+    0px 56px 0px #f7f6fb, 
+    0px 60px 0px #f7f6fb, 
+    0px 64px 0px #f7f6fb, 
+    0px 68px 0px #dfa5fc, 
+    0px 72px 0px #dfa5fc, 
+    0px 76px 0px #fafffe, 
+    0px 80px 0px #fafffe;
+}
+
+.candle {
+  position: relative;
+  height: 50px;
+  width: 12px;
+  top: 100px;
+  right: 0px;
+  margin: auto;
+  background: linear-gradient(0deg, rgba(183,244,167,1) 0%, rgba(255,255,255,1) 100%);
+  border-radius: 4px;
+  transform: translateZ(120px);
+}
+
+#flame {
+   position: absolute;
+   z-index: 10; 
+}
+
+.lit {
+   background: linear-gradient(to bottom, #FFF6D9, #FBC36C);
+  width: 15px;
+  height: 35px;
+  
+  
+/*  Info on border radius. http://www.css3.info/preview/rounded-border/ */
+    
+  border-top-left-radius: 10px 35px;    
+  border-top-right-radius:  10px 35px;
+  border-bottom-right-radius: 10px 10px;
+  border-bottom-left-radius: 10px 10px;
+  top: -34px;
+  margin: auto;
+  
+/*   http://www.css3.info/preview/box-shadow/ */
+  box-shadow: 
+    0 0 17px 7px rgba(251, 246, 190, 0.71); 
+  transform-origin: bottom;
+  animation: flicker 1s ease-in-out alternate infinite;
+}
+
+@keyframes flicker {
+  0% {
+    transform: skewX(5deg);
+    box-shadow: 
+    0 0 17px 10px rgba(251, 246, 190, 0.71);
+  }
+  
+  25% {
+    transform: skewX(-5deg);
+    box-shadow: 
+    0 0 17px 5px rgba(251, 246, 190, 0.71);
+  }
+  
+  50% {
+    transform: skewX(10deg);
+    box-shadow: 
+    0 0 17px 7px rgba(251, 246, 190, 0.71);
+  }
+  
+  75% {
+    transform: skewX(-10deg);
+    box-shadow: 
+    0 0 17px 5px rgba(251, 246, 190, 0.71);
+  }
+  
+  100% {
+    transform: skewX(5deg);
+    box-shadow: 
+    0 0 17px 10px rgba(251, 246, 190, 0.71);
+  }
+}
+
+.pyro > .before, .pyro > .after {
+  position: fixed;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  box-shadow: $box-shadow2;
+  @include animation((1s bang ease-out infinite backwards, 1s gravity ease-in infinite backwards, 5s position linear infinite backwards));
+}
+    
+.pyro > .after {
+  @include animation-delay((1.25s, 1.25s, 1.25s));
+  @include animation-duration((1.25s, 1.25s, 6.25s));
+}
+        
+@include keyframes(bang) {
+  to {
+    box-shadow:$box-shadow;
+  }
+}
+    
+@include keyframes(gravity)  {
+  to {
+    @include transform(translateY(200px));
+    opacity: 0;
+  }
+}
+    
+@include keyframes(position) {
+  0%, 19.9% {
+    margin-top: 10%;
+    margin-left: 40%;
+  }
+  20%, 39.9% {
+    margin-top: 40%;
+    margin-left: 30%;
+  }
+  40%, 59.9% {  
+    margin-top: 20%;
+    margin-left: 70%
+  }
+  60%, 79.9% {  
+    margin-top: 30%;
+    margin-left: 20%;
+  }
+  80%, 99.9% {  
+    margin-top: 30%;
+    margin-left: 80%;
+  }
+}
+
+}
+@import url(https://fonts.googleapis.com/css?family=Nobile:400italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+body {
+  background: #E5E5E5;
+  padding: 50px;
+}
+
+#card-front {
+  color: #FFDFDF;
+}
+
+#card, #card-front, #card-inside {
+  height: 880px;
+}
+
+.wrap {
+    padding: 1.5em 2.5em;
+    height: 100%;
+}
+#card-front, #card-inside {
+  width: 100%;
+  -webkit-box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+  -moz-box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .5);
+  position: absolute;
+  left: 0%;
+}
+
+
+#card-inside .wrap {
+    background: #FFDAB9;
+    -webkit-box-shadow: inset 2px 0 1px rgba(0, 0, 0, .05);
+    -moz-box-shadow: inset 2px 0 1px rgba(0, 0, 0, .05);
+    box-shadow: inset 2px 0 1px rgba(0, 0, 0, .05);
+}
+#card {
+    max-width: 960px;
+    margin: 0 auto;
+    transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    perspective: 5000px;
+    -moz-perspective: 5000px;
+    -webkit-perspective: 5000px;
+    position: relative;
+}
+
+#card h1 {
+	margin-top:250px;
+    text-align: center;
+    font-family: 'Nobile', sans-serif;
+    font-style: italic;
+    font-size: 70px;
+    text-shadow: 
+        4px 4px 0px rgba(0, 0, 0, .15),
+        1px 1px 0 rgba(255, 200, 200, 255),
+        2px 2px 0 rgba(255, 150, 150, 255),
+        3px 3px 0 rgba(255, 125, 125, 255);
+    color: #FFF;
+}
+#card h3 {
+text-align: center;
+font-size: 30px;
+}
+
+#card-inside {
+    font-size: 1.1em;
+    line-height: 1.4;
+    font-family: 'Nobile';
+    color: #331717;
+    font-style: italic;
+}
+
+p {
+    margin-top: 300px;
+}
+
+p:first-child {
+    margin-top: 0;
+}
+
+p.signed {
+    margin-top: 1.5em;
+    text-align: center;
+    font-family: 'Dancing Script', sans-serif;
+    font-size: 1.5em;
+}
+
+#card-front {
+    background-color: #FF5555;
+    background-image: linear-gradient(top, #FF5555 0%, #FF7777 100%);
+    background-image: -moz-linear-gradient(top, #FF5555 0%, #FF7777 100%);
+    background-image: -webkit-linear-gradient(top, #FF5555 0%, #FF7777 100%);
+            transform-origin: left;
+       -moz-transform-origin: left;
+    -webkit-transform-origin: left;
+            transition:         transform 1s linear;
+       -moz-transition:    -moz-transform 1s linear;
+    -webkit-transition: -webkit-transform 1s linear;
+    position: relative;
+}
+
+#card-front .wrap {
+            transition: background 1s linear;
+       -moz-transition: background 1s linear;
+    -webkit-transition: background 1s linear;
+}
+
+#card-front button {
+  position: absolute;
+  bottom: 1em;
+  right: -12px;
+  background: #F44;
+  color: #FFF;
+  font-family: 'Nobile', sans-serif;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.5em;
+  padding: .5em;
+  border: none;
+  cursor: pointer;
+          box-shadow: 2px 2px 3px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .4);
+     -moz-box-shadow: 2px 2px 3px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .4);
+  -webkit-box-shadow: 2px 2px 3px rgba(0, 0, 0, .25), 0 0 1px rgba(0, 0, 0, .4);
+}
+
+#card-front button:hover,
+#card-front button:focus {
+  background: #F22;
+}
+
+#close {
+  display: none;
+}
+
+#card.open-fully #close,
+#card-open-half #close {
+  display: inline;
+}
+
+#card.open-fully #open {
+  display: none;
+}
+
+
+#card.open-half #card-front,
+#card.close-half #card-front {
+            transform: rotateY(-90deg);
+       -moz-transform: rotateY(-90deg);
+    -webkit-transform: rotateY(-90deg);
+}
+#card.open-half #card-front .wrap {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+#card.open-fully #card-front,
+#card.close-half #card-front {
+  background: #FFEFEF;
+}
+
+#card.open-fully #card-front {
+    transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+}
+
+#card.open-fully #card-front .wrap {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+#card.open-fully #card-front .wrap *,
+#card.close-half #card-front .wrap * {
+   display: none;
+}
+
+footer {
+  max-width: 500px;
+  margin: 40px auto;
+  font-family: 'Nobile', sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #888;
+  text-align: center;
+}
+/*aaa*/
+@import url("https://fonts.googleapis.com/css?family=Sacramento");
+
+#top {
+  position: absolute;
+  margin-top: -31px;
+  margin-left: -8px;
+  padding: 0;
+  width: 100%;
+  height: 2em;
+  background-color: transparent;
+}
+#top #knot {
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - .05em);
+  height: .5em;
+  width: .1em;
+  background-color: #0f3146;
+}
+#top .smoke {
+  position: absolute;
+  opacity: 0;
+  border-radius: 100%;
+}
+#top .smoke:nth-child(1) {
+  bottom: .1em;
+  left: calc(50% - .5em);
+  height: .5em;
+  width: .5em;
+  background-color: silver;
+}
+#top .smoke:nth-child(2) {
+  bottom: .6em;
+  left: 50%;
+  height: .6em;
+  width: .6em;
+  background-color: lightgray;
+  animation-delay: .2s;
+}
+#top .smoke:nth-child(3) {
+  bottom: 1.1em;
+  left: 20%;
+  height: .3em;
+  width: .3em;
+  background-color: whitesmoke;
+  animation-delay: .3s;
+}
+#top #flame {
+  position: absolute;
+  bottom: .15em;
+  width: 1.5em;
+  height: 1.6em;
+  background-color: #ffee86;
+  border-radius: 100%;
+  box-shadow: inset 0 0 0 .1em #ffee86;
+  transform: rotateY(30deg);
+  cursor: pointer;
+}
+#top #flame::after {
+  position: absolute;
+  content: '';
+  width: .7em;
+  height: .9em;
+  bottom: 10%;
+  left: calc(50% - .35em);
+  background-color: #ff3200;
+  border-radius: 100%;
+  animation: burnInner 1.5s ease-in-out infinite;
+}
+#top #flame:hover {
+  transition: all .1s ease-in-out;
+  background-color: yellow;
+}
+#top #flame:hover::after {
+  background-color: red;
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 1.5em 2.2em rgba(255, 246, 162, 0.75);
+  }
+  50% {
+    box-shadow: 0 0 1.5em 2em rgba(255, 246, 162, 0.5);
+  }
+  100% {
+    box-shadow: 0 0 1.5em 2.2em rgba(255, 246, 162, 0.75);
+  }
+}
+@keyframes burn {
+  0% {
+    height: 1.7em;
+    transform: rotateY(30deg);
+  }
+  50% {
+    height: 1.3em;
+    transform: rotateY(0deg);
+    opacity: .9;
+  }
+  100% {
+    height: 1.7m;
+    transform: rotateY(30deg);
+  }
+}
+@keyframes burnInner {
+  0% {
+    height: .9em;
+    transform: rotateX(0deg);
+  }
+  50% {
+    height: .8em;
+    transform: rotateX(30deg);
+  }
+  100% {
+    height: .9em;
+    transform: rotateX(0deg);
+  }
+}
+@keyframes puff {
+  100% {
+    transform: rotateY(-30deg);
+    opacity: 0;
+  }
+}
+@keyframes puff-bubble {
+  0% {
+    opacity: 0;
+    transform: scale(1, 1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8, 0.8);
+  }
+}
+.glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+.burn {
+  animation: burn 1.5s ease-in-out infinite;
+}
+
+.puff {
+  animation: puff .3s ease-in-out forwards;
+}
+
+.puff-bubble {
+  animation: puff-bubble .75s ease-in-out forwards;
+}
+
+.stripe {
+  position: absolute;
+  left: -.25em;
+  width: 2em;
+  height: .25em;
+  background-color: #ff4b6f;
+  transform: rotate(25deg);
+  border-radius: 100%;
+  box-shadow: 1px 1px 0 1px rgba(0, 0, 0, 0.25);
+}
+
+.stripe:nth-child(1) {
+  top: 2.7em;
+  opacity: 1.4;
+}
+
+.stripe:nth-child(2) {
+  top: 4.2em;
+  opacity: 0.9;
+}
+
+.stripe:nth-child(3) {
+  top: 5.7em;
+  opacity: 0.73333;
+}
+
+.stripe:nth-child(4) {
+  top: 7.2em;
+  opacity: 0.65;
+}
+
+.stripe:nth-child(5) {
+  top: 8.7em;
+  opacity: 0.6;
+}
+
+
+</style>
+
+</head>
+<body>
+
+		
+<div id="card">
+    <div id="card-inside">	
+
+      <div class="wrap">
+		 <div class="cake"></div>
+         <div class="candle">
+			<div id="top">
+				<div id="flame" class="burn"></div>
+			  </div>
+			</div>
+		<p id="word">Happy Birthday, BaoBao, <br /><br />
+		I don't know why chinese Char cannot be shown because of the server problem, I spend time on it, but still not work.<br /><br />
+		SO, I have no idea but send my best wish for your birthday by the poor English and this html5 card created by my own. <br /><br />
+		Hopes that everything would be fine in the next year, notice, talk me more words every day would be my most happiness in the whole boring day. <br /><br />
+		Finally, Make a wish..<br /><br />
+		.. and tap the candle
+		</p>
+      </div>
+    </div>
+    <div id="card-front">
+      <div class="wrap">
+        <h1>Happy Birthday!</h1>		
+		<h3>TO QiuJie</h3>
+      </div>
+      <button id="open">&gt;</button>
+      <button id="close">&lt;</button>
+    </div>
+  </div>
+
+  <script>
+(function() {
+  function $(id) {
+    return document.getElementById(id);
+  }
+  var flame = $('flame');
+  var txt = $('word');
+  flame.addEventListener('click', function () {
+      flame.setAttribute('class','puff');
+      txt.textContent = 'It wil come true..';
+  }) 
+
+  var card = $('card'),
+      openB = $('open'),
+      closeB = $('close'),
+      timer = null;
+  console.log('wat', card);
+  openB.addEventListener('click', function () {
+    card.setAttribute('class', 'open-half');
+    if (timer) clearTimeout(timer);
+    timer = setTimeout(function () {
+      card.setAttribute('class', 'open-fully');
+      timer = null;
+    }, 1000);
+  });
+
+  closeB.addEventListener('click', function () {
+    card.setAttribute('class', 'close-half');
+    if (timer) clearTimerout(timer);
+    timer = setTimeout(function () {
+      card.setAttribute('class', '');
+      timer = null;
+    }, 1000);
+  });
+
+}());
+
+</script>
+</body>
+</html>
